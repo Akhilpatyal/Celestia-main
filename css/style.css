@@ -23842,3 +23842,155 @@ ul li {
 .filter{
   filter: brightness(0.9);
 }
+
+/* ========== GLASSMORPHISM CARD ========== */
+.calculator h3,h5{
+  color: white;
+}
+.calculator .card--custom.calc {
+  background: rgb(114 114 114 / 50%);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+   
+}
+
+/* ========== FORM INPUT STYLING ========== */
+.calculator input[type=number],
+.calculator .form-control2 {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.calculator input[type=number]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.calculator input[type=number]:focus,
+.calculator .form-control2:focus {
+  outline: none;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+/* Ensuring consistent size for inputs */
+.calculate__form-part input,
+.calculate__form-part .form-control2 {
+  min-height: 50px;
+  margin-bottom: 8px;
+}
+
+/*  */
+/* Apply consistent background and color to select options */
+select.form-control2,
+select.form-control2 option {
+  background: rgb(114 114 114);/* translucent */
+  color: #fff;
+}
+
+/* Optional: for some browsers (especially Firefox) */
+select.form-control2:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+
+/* ========== OPTIONAL: Button Enhancements ========== */
+.calculator .btn_theme {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 12px 25px;
+  border-radius: 15px;
+}
+
+.calculator button.btn_theme:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+}
+
+/* Ensure both sections look consistent */
+.calculator .card--custom__form .calculate__form-part {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calDis span{
+color: white;
+}
+
+.card {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  overflow: hidden; 
+  
+}
+
+/* Left glowing line */
+.card::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 80%;
+  width: 3px;
+  height: 120px;
+  background: linear-gradient(transparent, #cd830f, transparent);
+  opacity: 0;
+  transition: top 0.8s ease, opacity 0.8s ease;
+  z-index: 1;
+}
+
+/* Right glowing line */
+.card::before {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 80%;
+  width: 3px;
+  height: 120px;
+  background: linear-gradient(transparent, #cd830f, transparent);
+  opacity: 0;
+  transition: top 0.8s ease, opacity 0.8s ease;
+  z-index: 1;
+}
+
+.card:hover::after,
+.card:hover::before {
+  top: 25%;
+  opacity: 1;
+ 
+}
+
+
+.cardConversion{
+  background-image: url("../images/mask.png");
+  background-position: bottom;
+  border-radius: 18px;
+  background-repeat: no-repeat;
+  min-height: 220px;
+  padding: 20px 10px;
+  margin: 4px 0px;
+}
+ .f-40{
+  font-size: 40px !important;
+}
+.cardConversion .f-30{
+  font-size: 30px !important;
+}
+
+/* table */
