@@ -23975,7 +23975,7 @@ ul li {
 .filter {
   filter: brightness(0.9);
 }
-
+/* calculator section */
 /* ========== GLASSMORPHISM CARD ========== */
 .calculator h3,
 h5 {
@@ -24041,6 +24041,7 @@ select.form-control2:focus {
 /* ========== OPTIONAL: Button Enhancements ========== */
 .calculator .btn_theme {
   background: rgba(255, 255, 255, 0.2);
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   backdrop-filter: blur(10px);
@@ -24107,13 +24108,31 @@ select.form-control2:focus {
 }
 
 .cardConversion {
-  background-image: url("../images/mask.png");
+  /* background-image: url("../images/mask.png"); */
+  background-color: #181818e3;
   background-position: bottom;
   border-radius: 18px;
   background-repeat: no-repeat;
   min-height: 206px;
   padding: 20px 10px;
   margin: 4px 0px;
+  color: white;
+}
+.cardConversion:hover{
+  box-shadow:
+  rgba(0, 0, 0, 0.35) 0px 54px 55px,
+  rgba(0, 0, 0, 0.22) 0px -12px 30px,
+  rgba(0, 0, 0, 0.22) 0px 4px 6px,
+  rgba(255, 165, 0, 0.3)  0px 12px 13px,
+  rgba(0, 0, 0, 0.29) 0px -3px 5px,
+  rgba(255, 165, 0, 0.9) 0px 0px 30px; /* Orange glow */
+  
+  transition: 0.5s all ease-in-out;
+
+  background: #212121;
+
+
+
 }
 @media (min-width: 992px) and (max-width: 1250px) {
   .cardConversion {
@@ -24254,4 +24273,52 @@ h1 a {
 
 .pb-80 {
   padding-bottom: 80px;
+}
+
+
+/* scroller */
+.table-responsive {
+  overflow-x: auto;
+  max-height: 400px; /* or whatever fits best */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scroll-behavior: smooth; 
+}
+
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+  padding: 12px;
+  border: 1px solid #fff3;
+  border-left:none ;
+  border-top:none ;
+  text-align: left;
+}
+/* design scroller */
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px #cd830f;
+	background-color: black;
+  
+}
+
+/* all projects */
+#featureProject2 .item img {
+  height: 50vh;
+  /* Set the height to 70% of the viewport */
+  object-fit: cover;
+  /* Ensures the image covers the space without distortion */
+  object-position: center;
+  max-width: 100vw !important;
+  border-radius: 17px;
+  /* Make sure the width fills the container */
+}
+
+.orange{
+  color: #cd830f!important;
 }
