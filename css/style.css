@@ -24335,5 +24335,8 @@ h1 a {
 .visionTXT h5 {
   color: #606060;
 }
+.visionTXT ul {
+  padding-left: 1rem;
+}
 
 /* ameneties */
