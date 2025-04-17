@@ -23542,6 +23542,11 @@ button.contact_form_submit {
 #section-intro .centered {
   transform: translate(-50%, -0%) !important;
 }
+@media screen and (max-width: 670px) {
+  #section-intro .centered {
+    transform: translate(-54%, -50%) !important;
+  }
+}
 
 ul li {
   list-style: none;
