@@ -22454,7 +22454,7 @@ img {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  width: 70vh;
+  width: 60vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -23570,14 +23570,14 @@ ul li {
 
 .leftpro p span {
   font-size: 2rem;
-  color: rgb(82, 207, 82);
+  color: #fb5600e6;
   font-weight: 800;
 }
 
 /* button animation */
 .elemt {
   width: 35%;
-  background-color: rgb(82, 207, 82);
+  background: linear-gradient(to top right, #ff9c00 -5%, #fb5600 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24311,6 +24311,7 @@ h1 a {
   color: #cd830f!important;
 }
 
+/* new chaneges */
 /* all projects */
 #featureProject2 .item img {
   height: 50vh;
