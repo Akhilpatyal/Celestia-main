@@ -24311,3 +24311,15 @@ h1 a {
   color: #cd830f!important;
 }
 
+/* all projects */
+#featureProject2 .item img {
+  height: 50vh;
+  /* Set the height to 70% of the viewport */
+  object-fit: cover;
+  /* Ensures the image covers the space without distortion */
+  object-position: center;
+  max-width: 100vw !important;
+  border-radius: 17px;
+  /* Make sure the width fills the container */
+}
+
