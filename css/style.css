@@ -24323,3 +24323,8 @@ h1 a {
   /* Make sure the width fills the container */
 }
 
+@media (max-width:680px) {
+  #subheader h1 {
+    font-size: 40px;
+}
+}
