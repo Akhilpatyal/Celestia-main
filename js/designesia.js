@@ -1983,4 +1983,19 @@ document.addEventListener("mousemove", function (dets) {
 
 // custom
 
-  
+  new WOW().init();
+
+//   {/* // Re-trigger WOW animation on Bootstrap tab shown */}
+  document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function (e) {
+      const targetId = this.getAttribute('href');
+      const animatedElements = document.querySelectorAll(targetId + ' .wow');
+
+      animatedElements.forEach(el => {
+        el.classList.remove('animated', 'fadeIn'); // remove old animation
+        void el.offsetWidth; // trigger reflow to restart animation
+        el.classList.add('animated', 'fadeIn'); // re-add animation class
+      });
+    });
+  });
+
