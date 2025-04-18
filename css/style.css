@@ -24758,6 +24758,12 @@ padding-bottom: 20px;
   display: block;
   object-fit: fill;
 }
+@media screen and (max-width:600px) {
+  .apartments-plan-img img {
+   
+    height: 70vh;
+}
+}
 
 .fade {
   transition: opacity 0.15s linear;
