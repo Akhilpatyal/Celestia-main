@@ -23488,8 +23488,8 @@ ul li {
 }
 
 .dot {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   border-radius: 50%;
   position: fixed;
   z-index: 9;
@@ -24268,7 +24268,8 @@ figure>* {
 
 figure figcaption {
   display: grid;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
   font-family: sans-serif;
   font-size: 2.3rem;
   font-weight: bold;
@@ -24277,9 +24278,7 @@ figure figcaption {
   padding: .75rem;
   background: var(--c, #0009);
   clip-path: inset(0 var(--_i, 100%) 0 0);
-  /* -webkit-mask:
-    linear-gradient(#000 0 0),
-    linear-gradient(#000 0 0); */
+ 
   -webkit-mask-composite: xor;
   -webkit-mask-clip: text, padding-box;
   margin: -1px;
@@ -24348,19 +24347,7 @@ padding-bottom: 20px;
   position: relative;
 }
 
-/* .apartments-info-list>ul li::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  border: 1px dashed;
-  border-color: #FFF2F0;
-  z-index: 1;
-} */
+ 
 
 .apartments-info-list>ul li a {
   display: block;
@@ -24765,7 +24752,7 @@ padding-bottom: 20px;
   width: 100%;
   height: 80vh;
   display: block;
-  object-fit: fill;
+  object-fit: cover;
 }
 @media screen and (max-width:600px) {
   .apartments-plan-img img {
@@ -24795,4 +24782,7 @@ padding-bottom: 20px;
 }
 .bg-0range:hover{
   background: rgb(255 255 255 / 38%);
+}
+figure img {
+  margin-bottom: 0px!important;
 }
