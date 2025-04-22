@@ -24790,3 +24790,52 @@ figure img {
   font-size: large;
   padding: 0px 5px;
  } 
+
+
+ 
+.query-now {
+  position: fixed;
+  bottom: 0%;
+  right: 10px;
+  background: #1d293a;
+  border-radius: 8px;
+  writing-mode: vertical-lr;
+  z-index: 999;
+  transition: all 0.4s ease-in-out 0;
+  border: 1px solid #f4f1e8;
+}
+
+.query-now a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 7px;
+  display: flex;
+  align-items: center;
+}
+
+.query-now p {
+  padding: 10px 5px;
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.query-now img {
+  width: 35px;
+  padding: 2px;
+  background: #fff;
+  margin: 5px 1px 1px;
+  border-radius: 50%;
+}
+.color{
+  color: #16a34a;
+}
+
+
+@media (min-width: 790px) {
+  #query-fix-btn{
+    display: flex;
+    bottom: 100px;
+    right: 10px;
+  }
+  
+}
