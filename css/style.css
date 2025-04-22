@@ -24283,15 +24283,7 @@ figure figcaption {
   -webkit-mask-clip: text, padding-box;
   margin: -1px;
 }
-figure .figcaption2 {
-  display: grid;
-  align-items: center;
-  font-family: sans-serif;
-  font-size: 2.3rem;
-  font-weight: bold;
-  color: white;
- 
-}
+
 
 figure:hover figcaption {
   --_i: 0%;
@@ -24786,3 +24778,15 @@ padding-bottom: 20px;
 figure img {
   margin-bottom: 0px!important;
 }
+
+/* disclaiemer modal */
+.modal-container-body {
+	padding: 24px 32px 51px;
+	overflow-y: auto;
+  max-height: 80vh;
+}
+ .disclaimer{
+  cursor: pointer;
+  font-size: large;
+  padding: 0px 5px;
+ } 
