@@ -22796,7 +22796,8 @@ textarea.form-control {
 }
 
 #featureProject .item img {
-  height: 65vh;
+  height: 466px;
+  width: 505px;
   /* Set the height to 70% of the viewport */
   object-fit: cover;
   /* Ensures the image covers the space without distortion */
@@ -24838,4 +24839,62 @@ figure img {
     right: 10px;
   }
   
+}
+
+/* pop up */
+.image-source-link {
+	color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+.mfp-content figure {
+  all: unset;
+  display: block;
+  margin: 0;
+}
+
+.mfp-content figcaption {
+  all: unset;
+  display: block;
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  /* padding: 10px 0; */
+}
+.mfp-content figure:hover img {
+  transform: none;
+}
+img.mfp-img{
+  height: 553px!important;
+  width: 981px!important;
+}
+.filter-2 {
+  filter: brightness(0.7);
+}
+.gradient-text {
+  background: linear-gradient(135deg, #ff8e00, #da8900, #ffb800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
