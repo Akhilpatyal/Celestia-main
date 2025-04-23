@@ -24798,12 +24798,12 @@ figure img {
   position: fixed;
   bottom: 0%;
   right: 10px;
-  background: #1d293a;
+  background: rgba(247, 129, 4, 0.7);
   border-radius: 8px;
   writing-mode: vertical-lr;
   z-index: 999;
   transition: all 0.4s ease-in-out 0;
-  border: 1px solid #f4f1e8;
+  /* border: 1px solid #f4f1e8; */
 }
 
 .query-now a {
