@@ -1973,13 +1973,37 @@
  })(jQuery);
 
 
+ const cursor = document.querySelector(".dot");
+ const cursorOutline = document.querySelector(".cursor-outline");
+ 
+ window.addEventListener("mousemove", (e) => {
+   const x = e.clientX;
+   const y = e.clientY;
+ 
+   cursor.style.left = x + "px";
+   cursor.style.top = y + "px";
+ 
+//    cursorOutline.style.left = x + "px";
+//    cursorOutline.style.top = y + "px";
+cursorOutline.animate({
+    left: x + "px",
+    top: y + "px",
+     }, { duration: 500, fill: "forwards" });
 
- var cursor = document.querySelector(".dot")
-document.addEventListener("mousemove", function (dets) {
-  cursor.style.left = dets.x + 20+ "px"
-  cursor.style.top = dets.y + 20+ "px"
-})
+ });
+ 
+ const buttons = document.querySelectorAll(".hover-button");
 
+buttons.forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    cursorOutline.classList.add("scale-up");
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    cursorOutline.classList.remove("scale-up");
+  });
+});
+ 
 
 // custom
 

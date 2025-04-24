@@ -23489,19 +23489,43 @@ ul li {
 }
 
 .dot {
-  height: 22px;
-  width: 22px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
   position: fixed;
-  z-index: 9;
-  background-color: #edbfff;
-  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: orange;
+  /* border: 2px solid orange; */
+  /* mix-blend-mode: difference; */
   transform: translate(-50%, -50%);
-  transition: background-image ease 0.5s;
-  background-position: center;
-  background-size: cover;
+  pointer-events: none;
 }
 
+.cursor-outline {
+  height: 30px;
+  width: 30px;
+  border: 2px solid orange;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+.dot, .cursor-outline {
+  pointer-events: none;
+  z-index: 9999; /* High enough so it stays above everything */
+}
+.cursor-outline.scale-up {
+  transform: translate(-50%, -50%) scale(2);
+  transition: transform 0.5s ease-in-out;
+}
+/* body {
+  cursor: none;
+} */
 /* contact two
  */
 .modal-body {
