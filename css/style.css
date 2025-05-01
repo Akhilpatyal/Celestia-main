@@ -25126,8 +25126,9 @@ img.mfp-img {
 /* Button 1 */
 
  
-  /* From Uiverse.io by gharsh11032000 */
-  .card-2 {
+  /*   */
+  
+    .card-2 {
     padding: 20px;
     color: white;
     height: 80vh;
@@ -25140,16 +25141,17 @@ img.mfp-img {
     cursor: pointer;
     transform-origin: right bottom;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: animate 1s linear inf;
   }
   .card-2 a{
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box,
-      linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transform-origin: right bottom;
+   border-radius: 6px!important;
+   
+  }  
+  .card-2 a:hover{
+    background-color: #ffa5005e!important;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+  }  
 
   .card-2 .main-content {
     flex: 1;
@@ -25208,6 +25210,95 @@ img.mfp-img {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
     margin: -0.67em 0 -0.48em 0;
+    
     display: block;
     font-size: 60px;
+}
+ 
+
+
+
+
+/* extra */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+* {
+	box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+ 
+
+
+:root {
+  --d: 2500ms;
+  --angle: 145deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: #cd830f;
+  --c2: #40c9ff;
+}
+.wrapper {
+	min-width: min(40rem, 100%);
+}
+
+.box {
+	/* font-size: 3vw; */
+	margin: max(1rem, 3vw);
+	border: 0.25rem solid;
+	padding: 3vw;
+	/* border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30; */
+  border-image: conic-gradient(from var(--angle), #f1b559, var(--c1) 0.1turn, var(--c1) 0.15turn, rgb(255 255 255 / 16%) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
 }
