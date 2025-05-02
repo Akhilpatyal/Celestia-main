@@ -25132,7 +25132,7 @@ img.mfp-img {
     padding: 20px;
     color: white;
     height: 80vh;
-    background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%, #cd830f, #40c9ff) border-box;
+    /* background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%, #cd830f, #40c9ff) border-box; */
     border: 2px solid transparent;
     border-radius: 8px;
     display: flex;
@@ -25304,40 +25304,4 @@ img.mfp-img {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  */
+ 
