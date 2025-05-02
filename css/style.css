@@ -25189,7 +25189,7 @@ img.mfp-img {
     margin-right: 4px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
    
     .card-2 {
       
@@ -25222,7 +25222,6 @@ img.mfp-img {
 
 
 /* extra */
-@import url("https://fonts.googleapis.com/css?family=Raleway:400");
 
 * {
 	box-sizing: border-box;
