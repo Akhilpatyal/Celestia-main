@@ -2023,3 +2023,72 @@ buttons.forEach((btn) => {
     });
   });
 
+
+
+  /* Footer widget Activation */ 
+let accordion = true;
+const footerWidgetAccordion = function () {
+  accordion = false;
+  let footerWidgetContainer = document.querySelector(".main__footer");
+  footerWidgetContainer?.addEventListener("click", function (evt) {
+    let singleItemTarget = evt.target;
+    if (singleItemTarget.classList.contains("footer__widget--button")) {
+      const footerWidget = singleItemTarget.closest(".footer__widget"),
+        footerWidgetInner = footerWidget.querySelector(
+          ".footer__widget--inner"
+        );
+      if (footerWidget.classList.contains("active")) {
+        footerWidget.classList.remove("active");
+        slideUp(footerWidgetInner);
+      } else {
+        footerWidget.classList.add("active");
+        slideDown(footerWidgetInner);
+        getSiblings(footerWidget).forEach(function (item) {
+          const footerWidgetInner = item.querySelector(
+            ".footer__widget--inner"
+          );
+
+          item.classList.remove("active");
+          slideUp(footerWidgetInner);
+        });
+      }
+    }
+  });
+};
+
+window.addEventListener("load", function () {
+  if (accordion) {
+    footerWidgetAccordion();
+  }
+});
+window.addEventListener("resize", function () {
+  document.querySelectorAll(".footer__widget").forEach(function (item) {
+    if (window.outerWidth >= 768) {
+      item.classList.remove("active");
+      item.querySelector(".footer__widget--inner").style.display = "";
+    }
+  });
+  if (accordion) {
+    footerWidgetAccordion();
+  }
+});
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    const widgetTitles = document.querySelectorAll(".footer__widget--title");
+
+    widgetTitles.forEach(title => {
+      title.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+
+        // Toggle 'active' class for animation (optional)
+        this.classList.toggle("active");
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  });
+ 
